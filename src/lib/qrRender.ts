@@ -41,8 +41,9 @@ function computeLayout(options: QrRenderOptions, moduleCount: number): Layout {
   const moduleSize = qrSize / (moduleCount + QUIET_ZONE * 2);
   const fontSize = Math.max(14, Math.round(qrSize * 0.075));
   const bandHeight = Math.round(fontSize * 2.2);
-  const topBand = frameTopText.trim() ? bandHeight : 0;
-  const bottomBand = frameBottomText.trim() ? bandHeight : 0;
+  const hasFrameText = Boolean(frameTopText.trim() || frameBottomText.trim());
+  const topBand = hasFrameText ? bandHeight : 0;
+  const bottomBand = hasFrameText ? bandHeight : 0;
   const width = qrSize + MARGIN * 2;
   const height = qrSize + MARGIN * 2 + topBand + bottomBand;
 

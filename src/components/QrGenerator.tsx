@@ -24,11 +24,14 @@ const TABS: { id: QrTab; label: string }[] = [
 ];
 
 const COLOR_PRESETS = [
+  { name: "Classic", fg: "#111827", bg: "#FFFFFF", frame: "#111827" },
   { name: "Sunset", fg: "#B91C1C", bg: "#FFFBEB", frame: "#EA580C" },
-  { name: "Fire", fg: "#7C2D12", bg: "#FFF7ED", frame: "#DC2626" },
-  { name: "Amber", fg: "#9A3412", bg: "#FFFFFF", frame: "#F59E0B" },
-  { name: "Classic", fg: "#111827", bg: "#FFFFFF", frame: "#DC2626" },
-  { name: "Bold", fg: "#FFFFFF", bg: "#DC2626", frame: "#7C2D12" },
+  { name: "Ocean", fg: "#1E3A8A", bg: "#EFF6FF", frame: "#2563EB" },
+  { name: "Forest", fg: "#14532D", bg: "#F0FDF4", frame: "#16A34A" },
+  { name: "Grape", fg: "#4C1D95", bg: "#F5F3FF", frame: "#7C3AED" },
+  { name: "Rose", fg: "#831843", bg: "#FDF2F8", frame: "#DB2777" },
+  { name: "Slate", fg: "#0F172A", bg: "#F8FAFC", frame: "#334155" },
+  { name: "Bold", fg: "#FFFFFF", bg: "#111827", frame: "#F8FAFC" },
 ];
 
 export default function QrGenerator() {
@@ -52,9 +55,9 @@ export default function QrGenerator() {
     website: "",
   });
 
-  const [fgColor, setFgColor] = useState("#B91C1C");
-  const [bgColor, setBgColor] = useState("#FFFBEB");
-  const [frameColor, setFrameColor] = useState("#EA580C");
+  const [fgColor, setFgColor] = useState("#111827");
+  const [bgColor, setBgColor] = useState("#FFFFFF");
+  const [frameColor, setFrameColor] = useState("#111827");
   const [frameBgColor, setFrameBgColor] = useState("#FFFFFF");
   const [frameTopText, setFrameTopText] = useState("SCAN ME");
   const [frameBottomText, setFrameBottomText] = useState("");
